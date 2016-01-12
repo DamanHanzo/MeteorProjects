@@ -8,4 +8,7 @@ Router.map(function(){
 		path: '/',
 		template: 'posts'
 	});
+
+	//About 
+	this.route('about');
 });
