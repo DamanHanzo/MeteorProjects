@@ -25,3 +25,5 @@ accounts-password
 check
 joshowens:accounts-entry
 selaias:accounts-entry
+cfs:standard-packages
+cfs:gridfs
