@@ -5,7 +5,7 @@ Router.configure({
 Router.map(function(){
 	//Posts Route
 	this.route('posts',{
-		path: '/'
+		path: '/',
 		template: 'posts'
 	});
 });
