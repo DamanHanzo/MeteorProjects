@@ -2,5 +2,12 @@
  	{{renderPage}}
 </body>
 <template name="layout">
-	{{> yield}}
+	{{>navbar}}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				{{> yield}}
+			</div>
+		</div>
+	</div>
 </template>
