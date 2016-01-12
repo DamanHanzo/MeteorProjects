@@ -8,7 +8,9 @@ Router.map(function(){
 		path: '/',
 		template: 'posts'
 	});
-
 	//About 
 	this.route('about');
+
+	//Profile Route
+	this.route('profile');
 });

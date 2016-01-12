@@ -1,1 +1,27 @@
 /* CSS declarations go here */
+img{
+	width:100%;
+}
+
+.post{
+	margin-bottom: 20px;
+	padding-top: 20px;
+	border-bottom: 20px;
+}
+ 
+.post:after {
+	content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 10px;
+    background: beige;
+}
+
+.post:last-child:after{
+	content: "";
+    display: block;
+    height: 0px;
+    width: 0%;
+    margin: 0px;
+}
