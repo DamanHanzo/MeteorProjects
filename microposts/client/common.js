@@ -1,13 +1,18 @@
 Meteor.startup(function () {
 
-AccountsEntry.config({ wrapLinks: true,
+	AccountsEntry.config({ wrapLinks: true,
 
-homeRoute: '/',
+		homeRoute: '/',
 
-dashboardRoute: '/',
+		dashboardRoute: '/',
 
-waitEmailVerification: false
+		waitEmailVerification: false,
 
-});
+		passwordSignupFields: 'USERNAME_AND_EMAIL'
+
+	});
+	Accounts.ui.config({
+		passwordSignupFields: 'USERNAME_AND_EMAIL'
+	});
 
 });
