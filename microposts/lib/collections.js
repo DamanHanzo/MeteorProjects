@@ -13,12 +13,35 @@ Posts.attachSchema(new SimpleSchema({
 		max: 500
 	},
 	userId: {
-		type: String
+		type: String,
+		autoValue: function(){
+			return Meteor.userId()
+		}
 	},
 	username: {
-		type: String
+		type: String,
+		autoValue: function(){
+			return Meteor.users.findOne({_id: this.userId}).username}
 	},
 	createdAt: {
-		type: Date
+		type: String,
+		autoValue: function(){
+				
+			var monthNames = [
+			  "January", "February", "March",
+			  "April", "May", "June", "July",
+			  "August", "September", "October",
+			  "November", "December"
+			];
+
+			var date = new Date();
+			var day = date.getDate();
+			var monthIndex = date.getMonth();
+			var year = date.getFullYear();
+			var retuner = day + ' ' + monthNames[monthIndex] + ' ' + year;
+
+			return retuner;
+
+		}
 	}
 }));
