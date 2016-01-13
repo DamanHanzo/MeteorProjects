@@ -1,4 +1,4 @@
-#Micropost(light weight twitter)
+#Micropost(http://twitts.meteor.com)
 ##Plugins Used:
 * Iron-router: for simple and easy routes
 * meteor-autoform: simplies forms
