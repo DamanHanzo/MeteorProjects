@@ -1,11 +1,7 @@
 <template name="posts">
-	<!-- Button trigger modal -->
-	{{#if currentUser}}
-		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#postModal">
-		  Say Something!
-		</button>
-	{{/if}}
+	
 	<!-- Modal -->
+<div class="container" id="mainDiv">
 	<div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="myPostModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -24,21 +20,27 @@
 	  </div>
 	</div>
 
-	<hr>
-
+	
 	{{#each posts}}
 		<div class="row post">
 			<div class="col-md-1">
 				<img src="{{getProfileImg userId}}" style="width: 75%;">
 			</div>
 			<div class="col-md-11">
-				<small>Posted By {{username}} at {{createdAt}}</small>
+				<small>Posted By {{username}} at {{createdAt}} {{@index}}</small>
 				<p>{{body}}</p>
 			</div>
 		</div>
 	{{else}}
 		<p>No posts</p>
 	{{/each}}
-		
-	
+	<div id="buttonDiv" class="container animated fadeInUp fixed-top" >
+	<!-- Button trigger modal -->
+	{{#if currentUser}}
+		<button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#postModal" >
+		  Say Something!
+		</button>
+	{{/if}}
+	</div>
+</div>
 </template>
