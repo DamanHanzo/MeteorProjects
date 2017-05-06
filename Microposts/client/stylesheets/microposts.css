@@ -1,0 +1,49 @@
+/* CSS declarations go here */
+img{
+	width:100%;
+}
+
+#mainDiv {
+	position:relative;
+	top: 40px;
+}
+
+.post{
+	margin-bottom: 20px;
+	padding-top: 20px;
+	border-bottom: 20px;
+}
+ 
+.post:after {
+	content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: 10px;
+    background: beige;
+}
+
+.post:last-child:after{
+	content: "";
+    display: block;
+    height: 0px;
+    width: 0%;
+    margin: 0px;
+}
+#buttonDiv {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 65px;
+  -vendor-animation-duration: 15s;
+  -vendor-animation-delay: 10s;
+  -vendor-animation-iteration-count: infinite;
+/*z-index: 1000;
+position: absolute;
+
+width: 200px;
+height: 100px;
+*/
+}
+
